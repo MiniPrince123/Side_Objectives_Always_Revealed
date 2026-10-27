@@ -1,6 +1,9 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using System;
+using System.Collections.Generic;
+using System.Reflection;
+using System.Reflection.Emit;
 using HarmonyLib;
 using UnityEngine;
 
@@ -11,7 +14,6 @@ namespace MonMycoModRoot;
 public class Plugin : BaseUnityPlugin
 {
     internal new static ManualLogSource Logger;
-
     private Harmony _harmony;
 
     private void Awake()
@@ -31,30 +33,26 @@ public class Plugin : BaseUnityPlugin
 }
 
 [HarmonyPatch(
-    typeof(UpgradePopup),
-    nameof(UpgradePopup.Setup),
-    new Type[]
-    {
-        typeof(PickupInfo),
-        typeof(bool)
-    }
+    typeof(Waypoint),
+    nameof(Waypoint.EncounterWaypoint)
 )]
-internal static class UpgradePopupPatch
+internal static class MinimapPatch
 {
     [HarmonyPrefix]
-    private static void Prefix(ref PickupInfo info)
+    private static void Prefix()
     {
-        Plugin.Logger.LogDebug("UpgradePopup.Setup Started");
-        
-        info.name = $"[MODDED] {info.name}";
-
-        if (info.rarity == Rarity.Standard)
-            info.color = Color.lightPink;
+        // Plugin.Logger.LogDebug("Minimap.UpdateMinimap Started");
     }
-    
+
     [HarmonyPostfix]
-    private static void Postfix()
+    private static void Postfix(ref Waypoint __result)
     {
-        Plugin.Logger.LogDebug("UpgradePopup.Setup finished");
+        // Plugin.Logger.LogDebug($"NearbyIconDistance before patch: {__result.NearbyIconDistance}");
+        if(__result.NearbyIconDistance > 0.0)
+            __result.UseNearbyIcon = true;
+        // Plugin.Logger.LogDebug($"NearbyIconDistance after patch: {__result.NearbyIconDistance}");
+
+        // Plugin.Logger.LogDebug("Waypoint.EncounterWaypoint patched\n");
+        // Plugin.Logger.LogDebug("");
     }
 }
