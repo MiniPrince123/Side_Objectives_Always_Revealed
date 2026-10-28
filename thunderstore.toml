@@ -33,4 +33,4 @@ repository = "https://thunderstore.io"
 communities = [ "mycopunk", ]
 
 [publish.categories]
-mycopunk = [ "client", "qol", ]
+mycopunk = [ "cosmetic", "client", "qol", "mods"]
