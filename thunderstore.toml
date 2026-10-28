@@ -12,9 +12,9 @@ containsNsfwContent = false
 BepInEx-BepInExPack_Mycopunk = "5.4.2403"
 
 [build]
+outdir = "build"
 icon = "icon.png"
 readme = "README.md"
-outdir = "build"
 
 [[build.copy]]
 source = "bin/Release/netstandard2.1/Side_Objectives_Always_Revealed.dll"
@@ -34,5 +34,3 @@ communities = [ "mycopunk", ]
 
 [publish.categories]
 mycopunk = [ "client", "qol", ]
-
-
