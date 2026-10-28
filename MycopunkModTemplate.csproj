@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
-        <AssemblyName>SideObjectivesAlwaysShown</AssemblyName>
+        <AssemblyName>Side_Objectives_Always_Revealed</AssemblyName>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <LangVersion>latest</LangVersion>
         <RestoreAdditionalProjectSources>
@@ -9,7 +9,7 @@
             https://nuget.bepinex.dev/v3/index.json;
             https://nuget.samboy.dev/v3/index.json
         </RestoreAdditionalProjectSources>
-        <RootNamespace>MonMycoModRoot</RootNamespace>
+        <RootNamespace>MyMycoModRoot</RootNamespace>
 
         <GameVersion>2.0.3</GameVersion>
         <!-- Git tags must strart with v -->

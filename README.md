@@ -1,12 +1,4 @@
-# MycopunkModTemplate
+In the vanilla game, side objectives appear as question marks  on the minimap until the player gets close enough to them, at which point the icon changes to what the objective actually is. This mod removes this condition, and icons always appear as what they actually are.
 
-## How to use:
-
-- Use this as template for your repo
-- Change `AssemblyName` and `Product`
-- Change copyright holder in LICENSE
-- Uncomment and change the path to `Assembly-CSharp.dll` in `.csproj`
-- If you need more stuff like `Unity.TextMeshPro` or `UnityEngine.UI`, just add a reference to them the same way as main
-  dll
-- If you want `Unity.InputSystem`, add this line:
-  - `<PackageReference Include="UnityEngine.Modules" Version="2022.3.5" IncludeAssets="compile" />`
+## Features
+- Side objectives appear as what they actually are instead of appearing as question marks by default

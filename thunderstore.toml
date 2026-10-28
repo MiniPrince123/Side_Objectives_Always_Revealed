@@ -2,10 +2,10 @@
 schemaVersion = "0.0.1"
 
 [package]
-namespace = "TeamName"
-name = "PackageName"
-description = "Example mod description"
-websiteUrl = "https://github.com/funlennysub/MycopunkModTemplate"
+namespace = "MiniPrince123"
+name = "Side_Objectives_Always_Revealed"
+description = "Reveals what each side objective is without having to get close to it."
+websiteUrl = "https://github.com/MiniPrince123/SecondMycoMod"
 containsNsfwContent = false
 
 [package.dependencies]
@@ -17,8 +17,8 @@ readme = "README.md"
 outdir = "build"
 
 [[build.copy]]
-source = "bin/Release/netstandard2.1/MycopunkModTemplate.dll"
-target = "BepInEx/plugins/MycopunkModTemplate.dll"
+source = "bin/Release/netstandard2.1/Side_Objectives_Always_Revealed.dll"
+target = "BepInEx/plugins/Side_Objectives_Always_Revealed.dll"
 
 [[build.copy]]
 source = "CHANGELOG.md"
@@ -30,9 +30,9 @@ target = "LICENSE"
 
 [publish]
 repository = "https://thunderstore.io"
-communities = [ "mycopunk" ]
+communities = [ "mycopunk", ]
 
 [publish.categories]
-mycopunk = [ "client" ]
+mycopunk = [ "client", "qol", ]
 
 
