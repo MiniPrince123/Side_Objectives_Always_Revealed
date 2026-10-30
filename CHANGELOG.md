@@ -1,6 +1,11 @@
 # Changelog
 
 
+## 1.0.2 (2026-10-30)
+
+### Deprecation
+- Marked mod as Deprecated because it was integrated into [Better_Minimap](https://thunderstore.io/c/mycopunk/p/MiniPrince123/Better_Minimap/). Go download that instead.
+
 ## 1.0.1 (2026-10-28)
 
 ### Additions
